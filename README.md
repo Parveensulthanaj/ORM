@@ -47,8 +47,8 @@ class BankloanAdmin(admin.ModelAdmin):
 ```
 
 ## OUTPUT
-![alt text](<Screenshot 2024-10-28 141117-1.png>)
-Include the screenshot of your admin page.
+
+![alt text](<Screenshot 2024-11-04 145844-1.png>)
 
 
 ## RESULT
