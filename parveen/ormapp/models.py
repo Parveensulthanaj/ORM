@@ -1,12 +1,13 @@
 from django.db import models
 from django.contrib import admin
 class Bankloan(models.Model):
- name=models.CharField(max_length=100)
-age=models.IntegerField()
-ac=models.IntegerField(primary_key="ac")
-customerid=models.IntegerField()
-income=models.IntegerField()
+  date_of_birth=models.DateField(default=0)
+  fathers_name=models.CharField(max_length=70,default=0)
+  age=models.IntegerField(default=0)
+  customerid=models.IntegerField(primary_key="customerid",default=0) 
+  accountdetails=models.CharField(max_length=70,default=0)
+
 
 class BankloanAdmin(admin.ModelAdmin):
- list_dispaly=('name','age','ac','customerid','income')
+ list_display=('date_of_birth','fathers_name','age','customerid','accountdetails')
 

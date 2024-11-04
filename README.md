@@ -5,8 +5,8 @@
 To develop a Django application to store and retrieve data from a bank loan database using Object Relational Mapping(ORM).
 
 ## ENTITY RELATIONSHIP DIAGRAM
-
 ![alt text](image.png)
+
 
 ## DESIGN STEPS
 
@@ -24,29 +24,32 @@ Execute Django admin and create details for 10 books
 
 ## PROGRAM
 ```
-models.py
+admin.py
+from django.contrib import admin
+from.models import Bankloan,BankloanAdmin
+admin.site.register(Bankloan,BankloanAdmin)
+
+model.py
 from django.db import models
 from django.contrib import admin
 class Bankloan(models.Model):
- name=models.CharField(max_length=100)
-age=models.IntegerField()
-ac=models.IntegerField(primary_key="ac")
-customerid=models.IntegerField()
-income=models.IntegerField()
+  date_of_birth=models.DateField(default=0)
+  fathers_name=models.CharField(max_length=70,default=0)
+  age=models.IntegerField(default=0)
+  customerid=models.IntegerField(primary_key="customerid",default=0) 
+  accountdetails=models.CharField(max_length=70,default=0)
+
 
 class BankloanAdmin(admin.ModelAdmin):
- list_dispaly=('name','age','ac','customerid','income')
+ list_display=('date_of_birth','fathers_name','age','customerid','accountdetails')
 
-admin.py
-from django.contrib import admin
-from.models import Bankloan,BankloanAdmin 
-admin.site.register(Bankloan,BankloanAdmin)
+
+
 ```
 
-
 ## OUTPUT
-![alt text](screenshot-1729602670000.png)
 
+![alt text](<Screenshot 2024-11-04 145844.png>)
 Include the screenshot of your admin page.
 
 
